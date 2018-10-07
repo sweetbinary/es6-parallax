@@ -1,0 +1,41 @@
+/*img and .img-container styles are for demostration purposes only and not necessary*/
+
+.img-container {
+    display: flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; 
+}
+
+img {
+    display: block;
+    width: calc(33.33% - 20px);
+    margin: 10px;
+}
+
+
+/*original state of parallaxed element*/
+.plax-effect {
+    transition: transform 250ms ease-out, opacity 250ms linear;
+    transform: translate3d(0,200px,0);
+    opacity: 0;
+}
+
+/*media query optional, must be also changed on the .js file*/
+@media only screen and (min-width: 1025px) {
+    /*scrolled state of parallax element*/
+    .plax-effect.show {
+        transform: translate3d(0, 0px, 0);
+        opacity: 1;    
+    }
+
+    /*additional classes can be daisy-chained for additional effects*/
+    .plax-effect.show.transition-delay-250 {
+        transition-delay: 250ms;
+    }
+
+    .plax-effect.show.transition-delay-500 {
+        transition-delay: 500ms;
+    }
+}
