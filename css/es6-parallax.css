@@ -15,15 +15,16 @@ img {
 }
 
 
-/*original state of parallaxed element*/
-.plax-effect {
-    transition: transform 250ms ease-out, opacity 250ms linear;
-    transform: translate3d(0,200px,0);
-    opacity: 0;
-}
-
 /*media query optional, must be also changed on the .js file*/
 @media only screen and (min-width: 1025px) {
+    
+    /*original state of parallaxed element*/
+    .plax-effect {
+        transition: transform 250ms ease-out, opacity 250ms linear;
+        transform: translate3d(0,200px,0);
+        opacity: 0;
+    }
+        
     /*scrolled state of parallax element*/
     .plax-effect.show {
         transform: translate3d(0, 0px, 0);
